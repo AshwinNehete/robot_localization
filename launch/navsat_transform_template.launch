@@ -42,7 +42,6 @@
 
       <!-- Placeholders for input remapping. Set your topic names as the "to" values. -->
       <remap from="imu/data" to="/imu"/>
-      <remap from="odometry/filtered" to="/tracks_odometry"/>
       <remap from="gps/fix" to="/gps"/>
   </node>
 
