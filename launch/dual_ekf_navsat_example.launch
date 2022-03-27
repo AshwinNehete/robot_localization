@@ -16,12 +16,15 @@
 
   <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se_odom" clear_params="true"/>
 
-  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se_map" clear_params="true">
+  <!-- <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se_map" clear_params="true">
     <remap from="odometry/filtered" to="odometry/filtered_map"/>
-  </node>
+  </node> -->
 
   <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform" clear_params="true">
     <remap from="odometry/filtered" to="odometry/filtered_map"/>
   </node>
+
+  <node pkg="tf" type="static_transform_publisher" 
+        name="link5_broadcaster" args="0.0 0.0 0.0 0.0 0.0 0.0 1.0 odom map 100" />
 
 </launch>

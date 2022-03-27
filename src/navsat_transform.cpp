@@ -60,7 +60,7 @@ namespace RobotLocalization
     magnetic_declination_(0.0),
     yaw_offset_(0.0),
     base_link_frame_id_("base_link"),
-    gps_frame_id_(""),
+    gps_frame_id_("gps_link"),
     utm_zone_(0),
     world_frame_id_("odom"),
     transform_timeout_(ros::Duration(0)),
